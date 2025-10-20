@@ -1,0 +1,118 @@
+/* ===========================
+   GLOBAL STYLES & VARIABLES
+   =========================== */
+:root {
+  --black: #535872;
+  --white: #FFFFFF;
+  --blue-gray: #6A799C;
+  --blue-gray-dark: #516188;
+}
+
+/* Base typography and layout reset */
+body {
+  background-color: var(--blue-gray-dark);
+  color: var(--white);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===========================
+   CONTENT WRAPPER
+   Used throughout the site to center and contain content
+   =========================== */
+.content-wrap {
+  /* Instead of fixed width, using max-width makes the design more flexible */
+  max-width: 950px;
+  margin: 0 auto; /* Centers horizontally */
+  padding: 50px;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+/* ===========================
+   HEADER & FOOTER
+   =========================== */
+header, footer {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* ===========================
+   HEADINGS
+   =========================== */
+h1, h2, h3 {
+  font-family: "Merriweather", Georgia, serif;
+}
+
+h1 {
+  font-size: 2.9rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Section headings stand out on white background */
+h2 {
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 700;
+  padding: .6rem 1rem;
+  border-left: 8px solid var(--blue-gray);
+}
+
+/* ===========================
+   FOOTER LINKS
+   =========================== */
+footer {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.contact-info a {
+  display: inline-block;
+  color: var(--white);
+  background: var(--blue-gray);
+  border: 1px solid var(--white);
+  border-radius: 999px;
+  margin: 4px 6px;
+  padding: 10px 12px;
+}
+
+.contact-info a:hover {
+  background: var(--black);
+}
+
+/* ===========================
+   COLUMN LAYOUT & IMAGES
+   =========================== */
+.column-narrow {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+}
+
+.column-wide {
+  width: 67%;
+  float: left;
+}
+
+.profile-img {
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  outline: 3px solid var(--blue-gray-dark);
+}
+
+/* Clearfix for floated columns */
+.content-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
